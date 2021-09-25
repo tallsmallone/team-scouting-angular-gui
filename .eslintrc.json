@@ -5,7 +5,10 @@
     },
     "extends": [
         "google",
-        "plugin:angular/johnpapa"
+        "plugin:angular/johnpapa",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -16,5 +19,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-unused-vars": "error",
+        "indent": ["error", 2]
     }
 }
