@@ -18,6 +18,8 @@
     ],
     "rules": {
         "no-unused-vars": "error",
-        "indent": ["error", 2]
+        "indent": ["error", 2],
+        "new-cap": "off",
+        "require-jsdoc":"off"
     }
 }
