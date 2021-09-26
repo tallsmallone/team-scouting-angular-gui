@@ -42,7 +42,7 @@ export class ViewAllPlayersComponent implements OnInit, OnDestroy {
       confirmDelete: true,
     },
     edit: {
-      confirmEdit: true,
+      confirmSave: true,
     },
     columns: {
       id: {
@@ -131,10 +131,9 @@ export class ViewAllPlayersComponent implements OnInit, OnDestroy {
       source: LocalDataSource,
       confirm: Object
     }): void {
-    console.log('edited');
     this.dataService.updateUserInformation(event.newData).pipe(takeUntil(this.destroy$))
       .subscribe(() => {
-        event.source.update(event.originalData, event.newData);
+        location.reload();
       });
   }
 
